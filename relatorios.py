@@ -14,6 +14,8 @@ def relatorio_geral(clientes):
             print(f"Pet: {clientes[idd][2]}")
             print(f"Nascimento: {clientes[idd][3]}")
             print("-" * 50)
+        else:
+            print("Cliente Desativado.")
 
 
 def listagem_filtro(clientes):
