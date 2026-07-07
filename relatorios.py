@@ -70,8 +70,8 @@ def combinacao_dados(clientes, anim):
 
         if idd in anim:
             if clientes[idd][4] and anim[idd][3]:
-                print(
-                    clientes[idd][0], "\t",
-                    clientes[idd][2], "\t",
-                    "Data Da Vacinação: ", anim[idd][2]
-                    )
+                print(f"{clientes[idd][0]}\t\t{clientes[idd][2]}\t\t{anim[idd][2]}")
+                    
+    
+                    
+                    
