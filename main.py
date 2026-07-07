@@ -11,8 +11,6 @@ import vacinas as vacinas_
 import relatorios as relatorios_ 
 import fornecedores as fornecedores_
 
-import os
-import pickle
 
 
    
