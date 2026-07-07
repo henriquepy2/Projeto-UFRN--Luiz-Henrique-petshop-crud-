@@ -309,6 +309,7 @@ while True:
             print("\t\t2.Listar Fornecedores\t\t")
             print("\t\t3.Atualizar Fornecedores\t\t")
             print("\t\t4.Excluir Fornecedor")
+            print("\t\tSair")
             print("="*70)
             print()
 
