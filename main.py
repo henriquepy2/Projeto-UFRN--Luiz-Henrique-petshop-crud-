@@ -1,9 +1,3 @@
-#ATUALIZAÇOES O FOI COLOCADO UM NOVO MODULO ( DE FORNECEDORES) E AGORA COM
-#NOVOS CLIENTES ADICIONADOS NO DICIONARIO
-
-
-#PROJETO PETSHO
-
 from clientes import (
     cadastrar_cliente,
     listar_cliente,
@@ -11,14 +5,19 @@ from clientes import (
     excluir_cliente
 )
 
-
 import servicos as servicos_
-
-
-import fornecedores
 import estoque as estoque_
 import vacinas as vacinas_
-import relatorios as relatorios_
+import relatorios as relatorios_ 
+import fornecedores as fornecedores_
+
+import os
+import pickle
+
+
+   
+
+
 
 
 
@@ -319,13 +318,14 @@ while True:
 
             if perg == "1":
                 limpar_tela()
-                fornec = fornecedores.add_fornecedor(fornec)
+                fornec = fornecedores_.add_fornecedor(fornec)
+
                 pausa()
 
            
             elif perg == "2":
                 limpar_tela()
-                fornecedores.listar_fornecedor(fornec)
+                fornecedores_.listar_fornecedor(fornec)
                    
                 pausa()
 
@@ -336,7 +336,7 @@ while True:
 
             elif perg == "3":
                 limpar_tela()
-                fornec = fornecedores.att_fornecedor(fornec)
+                fornec = fornecedores_.att_fornecedor(fornec)
                    
                 pausa()
 
@@ -345,8 +345,7 @@ while True:
                
             elif perg == "4":
                 limpar_tela()
-                fornec = fornecedores.excluir_fornecedor(fornec)
-
+                fornec = fornecedores_.excluir_fornecedor(fornec)
 
                
                 pausa()
@@ -562,6 +561,9 @@ arq_clientes = open("clientes.dat", "wb")
 pickle.dump(clientes, arq_clientes)
 arq_clientes.close()
 
+arq_anim = open("anim.dat", "wb")
+pickle.dump(anim, arq_anim)
+arq_anim.close() 
 arq_anim = open("anim.dat", "wb")
 pickle.dump(anim, arq_anim)
 arq_anim.close()
